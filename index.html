@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My To Do App</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    
+<body class="bg-error">
+    <main class="flex items-center min-h-screen justify-center">
+        <div class="todoContainer">
+            <div class="indicator">
+                <div class="indicator-item indicator-bottom">
+                  <button onclick="addTask()" class="btn btn-warning capitalize border-none lg:text-black font-bold">add your task</button>
+                </div> 
+                <div class="card border">
+                  <div class="card-body">
+                    <div class="indicator">
+                        <input id="taskInput" type="text" placeholder="your task" class="input input-bordered capitalize" />
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <ul id="listUl" class="p-4 bg-white mt-8 rounded-lg">
+                <p id="dummyP">your list is empty.</p>
+                <!-- <li class="checked">Lorem ipsum dolor sit amet.</li>
+                <li class="">Lorem ipsum dolor sit amet.</li> -->
+            </ul>
+        </div>
+        
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/tailwind.config.js"></script>
 </body>
 </html>
